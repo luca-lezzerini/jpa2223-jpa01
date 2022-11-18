@@ -635,3 +635,472 @@ org.hibernate.InstantiationException: No default constructor for entity:  : al.p
 2022-11-18 11:10:37.853 TRACE 8584 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Ismail]
 2022-11-18 11:10:37.853 TRACE 8584 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Qemali]
 2022-11-18 11:10:37.854 TRACE 8584 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [BIGINT] - [8]
+2022-11-18 11:50:49.720  WARN 15952 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-18 11:51:00.597 DEBUG 15952 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* delete 
+    from
+        Student x */ delete 
+        from
+            student
+2022-11-18 11:51:00.642 DEBUG 15952 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        hibernate_sequence for update
+            
+2022-11-18 11:51:00.644 DEBUG 15952 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        hibernate_sequence 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2022-11-18 11:51:00.684 DEBUG 15952 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert al.polis.myfirstjpa.model.Student
+        */ insert 
+        into
+            student
+            (first_name, last_name, id) 
+        values
+            (?, ?, ?)
+2022-11-18 11:51:00.687 TRACE 15952 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Ledio]
+2022-11-18 11:51:00.687 TRACE 15952 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Hoxha]
+2022-11-18 11:51:00.688 TRACE 15952 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [BIGINT] - [9]
+2022-11-18 11:51:00.721 DEBUG 15952 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* load al.polis.myfirstjpa.model.Student */ select
+        student0_.id as id1_0_0_,
+        student0_.first_name as first_na2_0_0_,
+        student0_.last_name as last_nam3_0_0_ 
+    from
+        student student0_ 
+    where
+        student0_.id=?
+2022-11-18 11:51:00.723 TRACE 15952 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1000]
+2022-11-18 11:51:00.731 DEBUG 15952 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        hibernate_sequence for update
+            
+2022-11-18 11:51:00.733 DEBUG 15952 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        hibernate_sequence 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2022-11-18 11:51:00.742 DEBUG 15952 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert al.polis.myfirstjpa.model.Student
+        */ insert 
+        into
+            student
+            (first_name, last_name, id) 
+        values
+            (?, ?, ?)
+2022-11-18 11:51:00.743 TRACE 15952 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Ismail]
+2022-11-18 11:51:00.744 TRACE 15952 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Qemali]
+2022-11-18 11:51:00.744 TRACE 15952 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [BIGINT] - [10]
+2022-11-18 11:51:00.756 DEBUG 15952 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        student0_.id as id1_0_0_,
+        student0_.first_name as first_na2_0_0_,
+        student0_.last_name as last_nam3_0_0_ 
+    from
+        student student0_ 
+    where
+        student0_.id=?
+2022-11-18 11:51:00.759 TRACE 15952 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1000]
+2022-11-18 11:52:03.799  WARN 17124 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-18 11:52:09.447 DEBUG 17124 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* delete 
+    from
+        Student x */ delete 
+        from
+            student
+2022-11-18 11:52:09.470 DEBUG 17124 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        hibernate_sequence for update
+            
+2022-11-18 11:52:09.472 DEBUG 17124 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        hibernate_sequence 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2022-11-18 11:52:09.502 DEBUG 17124 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert al.polis.myfirstjpa.model.Student
+        */ insert 
+        into
+            student
+            (first_name, last_name, id) 
+        values
+            (?, ?, ?)
+2022-11-18 11:52:09.504 TRACE 17124 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Ledio]
+2022-11-18 11:52:09.505 TRACE 17124 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Hoxha]
+2022-11-18 11:52:09.505 TRACE 17124 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [BIGINT] - [11]
+2022-11-18 11:52:09.532 DEBUG 17124 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* load al.polis.myfirstjpa.model.Student */ select
+        student0_.id as id1_0_0_,
+        student0_.first_name as first_na2_0_0_,
+        student0_.last_name as last_nam3_0_0_ 
+    from
+        student student0_ 
+    where
+        student0_.id=?
+2022-11-18 11:52:09.533 TRACE 17124 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1000]
+2022-11-18 11:52:09.536 DEBUG 17124 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        hibernate_sequence for update
+            
+2022-11-18 11:52:09.538 DEBUG 17124 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        hibernate_sequence 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2022-11-18 11:52:09.544 DEBUG 17124 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert al.polis.myfirstjpa.model.Student
+        */ insert 
+        into
+            student
+            (first_name, last_name, id) 
+        values
+            (?, ?, ?)
+2022-11-18 11:52:09.544 TRACE 17124 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Ismail]
+2022-11-18 11:52:09.545 TRACE 17124 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Qemali]
+2022-11-18 11:52:09.545 TRACE 17124 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [BIGINT] - [12]
+2022-11-18 11:52:09.562 DEBUG 17124 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        student0_.id as id1_0_0_,
+        student0_.first_name as first_na2_0_0_,
+        student0_.last_name as last_nam3_0_0_ 
+    from
+        student student0_ 
+    where
+        student0_.id=?
+2022-11-18 11:52:09.563 TRACE 17124 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [1000]
+2022-11-18 11:53:13.620  WARN 12472 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-18 11:53:20.038 DEBUG 12472 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* delete 
+    from
+        Student x */ delete 
+        from
+            student
+2022-11-18 11:53:20.065 DEBUG 12472 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        hibernate_sequence for update
+            
+2022-11-18 11:53:20.067 DEBUG 12472 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        hibernate_sequence 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2022-11-18 11:53:20.093 DEBUG 12472 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert al.polis.myfirstjpa.model.Student
+        */ insert 
+        into
+            student
+            (first_name, last_name, id) 
+        values
+            (?, ?, ?)
+2022-11-18 11:53:20.095 TRACE 12472 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Ledio]
+2022-11-18 11:53:20.095 TRACE 12472 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Hoxha]
+2022-11-18 11:53:20.096 TRACE 12472 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [BIGINT] - [13]
+2022-11-18 11:53:20.106 DEBUG 12472 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        hibernate_sequence for update
+            
+2022-11-18 11:53:20.107 DEBUG 12472 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        hibernate_sequence 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2022-11-18 11:53:20.112 DEBUG 12472 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert al.polis.myfirstjpa.model.Student
+        */ insert 
+        into
+            student
+            (first_name, last_name, id) 
+        values
+            (?, ?, ?)
+2022-11-18 11:53:20.112 TRACE 12472 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Ismail]
+2022-11-18 11:53:20.113 TRACE 12472 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Qemali]
+2022-11-18 11:53:20.113 TRACE 12472 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [BIGINT] - [14]
+2022-11-18 11:53:20.139 ERROR 12472 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.orm.jpa.JpaSystemException: identifier of an instance of al.polis.myfirstjpa.model.Student was altered from 14 to 1000; nested exception is org.hibernate.HibernateException: identifier of an instance of al.polis.myfirstjpa.model.Student was altered from 14 to 1000] with root cause
+
+org.hibernate.HibernateException: identifier of an instance of al.polis.myfirstjpa.model.Student was altered from 14 to 1000
+	at org.hibernate.event.internal.DefaultFlushEntityEventListener.checkId(DefaultFlushEntityEventListener.java:80) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.event.internal.DefaultFlushEntityEventListener.getValues(DefaultFlushEntityEventListener.java:203) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.event.internal.DefaultFlushEntityEventListener.onFlushEntity(DefaultFlushEntityEventListener.java:162) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.flushEntities(AbstractFlushingEventListener.java:229) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.event.internal.AbstractFlushingEventListener.flushEverythingToExecutions(AbstractFlushingEventListener.java:93) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.event.internal.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:39) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.internal.SessionImpl.doFlush(SessionImpl.java:1407) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.internal.SessionImpl.managedFlush(SessionImpl.java:489) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.internal.SessionImpl.flushBeforeTransactionCompletion(SessionImpl.java:3303) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.internal.SessionImpl.beforeTransactionCompletion(SessionImpl.java:2438) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.beforeTransactionCompletion(JdbcCoordinatorImpl.java:449) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.beforeCompletionCallback(JdbcResourceLocalTransactionCoordinatorImpl.java:183) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl.access$300(JdbcResourceLocalTransactionCoordinatorImpl.java:40) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.commit(JdbcResourceLocalTransactionCoordinatorImpl.java:281) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.commit(TransactionImpl.java:101) ~[hibernate-core-5.6.12.Final.jar:5.6.12.Final]
+	at org.springframework.orm.jpa.JpaTransactionManager.doCommit(JpaTransactionManager.java:562) ~[spring-orm-5.3.23.jar:5.3.23]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.processCommit(AbstractPlatformTransactionManager.java:743) ~[spring-tx-5.3.23.jar:5.3.23]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.commit(AbstractPlatformTransactionManager.java:711) ~[spring-tx-5.3.23.jar:5.3.23]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.commitTransactionAfterReturning(TransactionAspectSupport.java:654) ~[spring-tx-5.3.23.jar:5.3.23]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:407) ~[spring-tx-5.3.23.jar:5.3.23]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:174) ~[spring-data-jpa-2.7.5.jar:2.7.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.23.jar:5.3.23]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.23.jar:5.3.23]
+	at jdk.proxy2/jdk.proxy2.$Proxy95.save(Unknown Source) ~[na:na]
+	at al.polis.myfirstjpa.service.impl.StudentServiceImpl.saveStudent(StudentServiceImpl.java:19) ~[classes/:na]
+	at al.polis.myfirstjpa.controller.ExampelController.saveTest(ExampelController.java:24) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670) ~[tomcat-embed-core-9.0.68.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779) ~[tomcat-embed-core-9.0.68.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.68.jar:9.0.68]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-11-18 11:56:09.987  WARN 16080 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-18 11:56:14.193 DEBUG 16080 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* delete 
+    from
+        Student x */ delete 
+        from
+            student
+2022-11-18 11:56:14.218 DEBUG 16080 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        hibernate_sequence for update
+            
+2022-11-18 11:56:14.220 DEBUG 16080 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        hibernate_sequence 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2022-11-18 11:56:14.248 DEBUG 16080 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert al.polis.myfirstjpa.model.Student
+        */ insert 
+        into
+            student
+            (first_name, last_name, id) 
+        values
+            (?, ?, ?)
+2022-11-18 11:56:14.250 TRACE 16080 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Ledio]
+2022-11-18 11:56:14.250 TRACE 16080 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Hoxha]
+2022-11-18 11:56:14.251 TRACE 16080 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [BIGINT] - [15]
+2022-11-18 11:56:14.260 DEBUG 16080 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        hibernate_sequence for update
+            
+2022-11-18 11:56:14.261 DEBUG 16080 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        hibernate_sequence 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2022-11-18 11:56:14.268 DEBUG 16080 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert al.polis.myfirstjpa.model.Student
+        */ insert 
+        into
+            student
+            (first_name, last_name, id) 
+        values
+            (?, ?, ?)
+2022-11-18 11:56:14.269 TRACE 16080 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Ismail]
+2022-11-18 11:56:14.269 TRACE 16080 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Qemali]
+2022-11-18 11:56:14.269 TRACE 16080 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [BIGINT] - [16]
+2022-11-18 11:56:14.312 DEBUG 16080 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* select
+        generatedAlias0 
+    from
+        Student as generatedAlias0 */ select
+            student0_.id as id1_0_,
+            student0_.first_name as first_na2_0_,
+            student0_.last_name as last_nam3_0_ 
+        from
+            student student0_
+2022-11-18 11:57:11.902  WARN 15264 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-18 11:57:22.740 DEBUG 15264 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* delete 
+    from
+        Student x */ delete 
+        from
+            student
+2022-11-18 11:57:22.766 DEBUG 15264 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        hibernate_sequence for update
+            
+2022-11-18 11:57:22.767 DEBUG 15264 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        hibernate_sequence 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2022-11-18 11:57:22.794 DEBUG 15264 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert al.polis.myfirstjpa.model.Student
+        */ insert 
+        into
+            student
+            (first_name, last_name, id) 
+        values
+            (?, ?, ?)
+2022-11-18 11:57:22.797 TRACE 15264 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Ledio]
+2022-11-18 11:57:22.798 TRACE 15264 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Hoxha]
+2022-11-18 11:57:22.798 TRACE 15264 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [BIGINT] - [17]
+2022-11-18 11:57:22.805 DEBUG 15264 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        hibernate_sequence for update
+            
+2022-11-18 11:57:22.806 DEBUG 15264 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        hibernate_sequence 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2022-11-18 11:57:22.811 DEBUG 15264 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert al.polis.myfirstjpa.model.Student
+        */ insert 
+        into
+            student
+            (first_name, last_name, id) 
+        values
+            (?, ?, ?)
+2022-11-18 11:57:22.811 TRACE 15264 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Ismail]
+2022-11-18 11:57:22.811 TRACE 15264 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Qemali]
+2022-11-18 11:57:22.812 TRACE 15264 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [BIGINT] - [18]
+2022-11-18 11:57:22.854 DEBUG 15264 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* select
+        generatedAlias0 
+    from
+        Student as generatedAlias0 */ select
+            student0_.id as id1_0_,
+            student0_.first_name as first_na2_0_,
+            student0_.last_name as last_nam3_0_ 
+        from
+            student student0_
+2022-11-18 11:57:22.875 DEBUG 15264 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        student0_.id as id1_0_0_,
+        student0_.first_name as first_na2_0_0_,
+        student0_.last_name as last_nam3_0_0_ 
+    from
+        student student0_ 
+    where
+        student0_.id=?
+2022-11-18 11:57:22.875 TRACE 15264 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [34]
+2022-11-18 12:20:38.882  WARN 13684 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-11-18 12:21:30.043 DEBUG 13684 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* load al.polis.myfirstjpa.model.Student */ select
+        student0_.id as id1_0_0_,
+        student0_.first_name as first_na2_0_0_,
+        student0_.last_name as last_nam3_0_0_ 
+    from
+        student student0_ 
+    where
+        student0_.id=?
+2022-11-18 12:21:30.053 TRACE 13684 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [123]
+2022-11-18 12:21:30.082 DEBUG 13684 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        hibernate_sequence for update
+            
+2022-11-18 12:21:30.086 DEBUG 13684 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    update
+        hibernate_sequence 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2022-11-18 12:21:30.131 DEBUG 13684 --- [http-nio-8080-exec-1] org.hibernate.SQL                        : 
+    /* insert al.polis.myfirstjpa.model.Student
+        */ insert 
+        into
+            student
+            (first_name, last_name, id) 
+        values
+            (?, ?, ?)
+2022-11-18 12:21:30.132 TRACE 13684 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Mario]
+2022-11-18 12:21:30.133 TRACE 13684 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Bros]
+2022-11-18 12:21:30.136 TRACE 13684 --- [http-nio-8080-exec-1] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [BIGINT] - [19]
