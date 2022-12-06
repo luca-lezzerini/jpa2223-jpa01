@@ -10,7 +10,7 @@ import lombok.Data;
 import lombok.ToString;
 
 @Data
-@ToString
+@ToString(exclude = {"course"})
 @Entity
 public class Student implements Serializable {
 

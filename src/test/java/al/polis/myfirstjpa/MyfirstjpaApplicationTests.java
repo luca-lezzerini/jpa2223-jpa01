@@ -123,7 +123,7 @@ class MyfirstjpaApplicationTests {
         // llok for a course for a student
         var oneJapStudent = japStudents.get(0);
         Course cx = courseRepository.readCourseForStudent(oneJapStudent.getId());
-        System.out.println("The course is " + cx.getCode());
+        System.out.println("The course is " + cx);
     }
     
 }

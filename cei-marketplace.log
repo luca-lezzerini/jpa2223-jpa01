@@ -11063,3 +11063,1070 @@ Caused by: org.springframework.data.mapping.PropertyReferenceException: No prope
     where
         course0_.id=?
 2022-12-06 11:21:37.851 TRACE 8556 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [90]
+2022-12-06 11:25:20.851  WARN 11956 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-06 11:25:22.074 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    /* delete 
+    from
+        Student x */ delete 
+        from
+            student
+2022-12-06 11:25:22.086 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    /* delete 
+    from
+        Course x */ delete 
+        from
+            course
+2022-12-06 11:25:22.109 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    /* select
+        count(*) 
+    from
+        Student x */ select
+            count(*) as col_0_0_ 
+        from
+            student student0_
+2022-12-06 11:25:22.145 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        hibernate_sequence for update
+            
+2022-12-06 11:25:22.147 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    update
+        hibernate_sequence 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2022-12-06 11:25:22.202 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    /* insert al.polis.myfirstjpa.model.Student
+        */ insert 
+        into
+            student
+            (course_id, first_name, last_name, id) 
+        values
+            (?, ?, ?, ?)
+2022-12-06 11:25:22.207 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2022-12-06 11:25:22.208 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Ledio]
+2022-12-06 11:25:22.209 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Hoxha]
+2022-12-06 11:25:22.209 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [91]
+2022-12-06 11:25:22.242 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    select
+        student0_.id as id1_1_0_,
+        student0_.course_id as course_i4_1_0_,
+        student0_.first_name as first_na2_1_0_,
+        student0_.last_name as last_nam3_1_0_,
+        course1_.id as id1_0_1_,
+        course1_.code as code2_0_1_,
+        course1_.description as descript3_0_1_,
+        course1_.name as name4_0_1_ 
+    from
+        student student0_ 
+    left outer join
+        course course1_ 
+            on student0_.course_id=course1_.id 
+    where
+        student0_.id=?
+2022-12-06 11:25:22.243 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [91]
+2022-12-06 11:25:22.266 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        hibernate_sequence for update
+            
+2022-12-06 11:25:22.269 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    update
+        hibernate_sequence 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2022-12-06 11:25:22.281 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    /* insert al.polis.myfirstjpa.model.Student
+        */ insert 
+        into
+            student
+            (course_id, first_name, last_name, id) 
+        values
+            (?, ?, ?, ?)
+2022-12-06 11:25:22.282 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2022-12-06 11:25:22.283 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Ina]
+2022-12-06 11:25:22.284 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Tano]
+2022-12-06 11:25:22.284 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [92]
+2022-12-06 11:25:22.312 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    select
+        student0_.id as id1_1_0_,
+        student0_.course_id as course_i4_1_0_,
+        student0_.first_name as first_na2_1_0_,
+        student0_.last_name as last_nam3_1_0_,
+        course1_.id as id1_0_1_,
+        course1_.code as code2_0_1_,
+        course1_.description as descript3_0_1_,
+        course1_.name as name4_0_1_ 
+    from
+        student student0_ 
+    left outer join
+        course course1_ 
+            on student0_.course_id=course1_.id 
+    where
+        student0_.id=?
+2022-12-06 11:25:22.313 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [92]
+2022-12-06 11:25:22.318 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        hibernate_sequence for update
+            
+2022-12-06 11:25:22.320 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    update
+        hibernate_sequence 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2022-12-06 11:25:22.331 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    /* insert al.polis.myfirstjpa.model.Student
+        */ insert 
+        into
+            student
+            (course_id, first_name, last_name, id) 
+        values
+            (?, ?, ?, ?)
+2022-12-06 11:25:22.331 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2022-12-06 11:25:22.332 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Oresti]
+2022-12-06 11:25:22.333 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Elezi]
+2022-12-06 11:25:22.333 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [93]
+2022-12-06 11:25:22.344 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    select
+        student0_.id as id1_1_0_,
+        student0_.course_id as course_i4_1_0_,
+        student0_.first_name as first_na2_1_0_,
+        student0_.last_name as last_nam3_1_0_,
+        course1_.id as id1_0_1_,
+        course1_.code as code2_0_1_,
+        course1_.description as descript3_0_1_,
+        course1_.name as name4_0_1_ 
+    from
+        student student0_ 
+    left outer join
+        course course1_ 
+            on student0_.course_id=course1_.id 
+    where
+        student0_.id=?
+2022-12-06 11:25:22.345 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [93]
+2022-12-06 11:25:22.352 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        hibernate_sequence for update
+            
+2022-12-06 11:25:22.354 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    update
+        hibernate_sequence 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2022-12-06 11:25:22.397 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    /* insert al.polis.myfirstjpa.model.Student
+        */ insert 
+        into
+            student
+            (course_id, first_name, last_name, id) 
+        values
+            (?, ?, ?, ?)
+2022-12-06 11:25:22.398 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2022-12-06 11:25:22.398 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Jonada]
+2022-12-06 11:25:22.399 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Halidini]
+2022-12-06 11:25:22.399 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [94]
+2022-12-06 11:25:22.409 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    select
+        student0_.id as id1_1_0_,
+        student0_.course_id as course_i4_1_0_,
+        student0_.first_name as first_na2_1_0_,
+        student0_.last_name as last_nam3_1_0_,
+        course1_.id as id1_0_1_,
+        course1_.code as code2_0_1_,
+        course1_.description as descript3_0_1_,
+        course1_.name as name4_0_1_ 
+    from
+        student student0_ 
+    left outer join
+        course course1_ 
+            on student0_.course_id=course1_.id 
+    where
+        student0_.id=?
+2022-12-06 11:25:22.410 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [94]
+2022-12-06 11:25:22.417 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        hibernate_sequence for update
+            
+2022-12-06 11:25:22.419 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    update
+        hibernate_sequence 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2022-12-06 11:25:22.444 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    /* insert al.polis.myfirstjpa.model.Course
+        */ insert 
+        into
+            course
+            (code, description, name, id) 
+        values
+            (?, ?, ?, ?)
+2022-12-06 11:25:22.445 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [JAP]
+2022-12-06 11:25:22.445 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Use Java as better as possible]
+2022-12-06 11:25:22.445 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Java Advanced Programming]
+2022-12-06 11:25:22.445 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [95]
+2022-12-06 11:25:22.460 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        hibernate_sequence for update
+            
+2022-12-06 11:25:22.462 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    update
+        hibernate_sequence 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2022-12-06 11:25:22.470 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    /* insert al.polis.myfirstjpa.model.Course
+        */ insert 
+        into
+            course
+            (code, description, name, id) 
+        values
+            (?, ?, ?, ?)
+2022-12-06 11:25:22.471 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [PYT]
+2022-12-06 11:25:22.471 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Use Python everywhere]
+2022-12-06 11:25:22.471 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Python Programming]
+2022-12-06 11:25:22.472 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [96]
+2022-12-06 11:25:22.551 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    /* select
+        generatedAlias0 
+    from
+        Student as generatedAlias0 
+    where
+        generatedAlias0.lastName like :param0 escape :param1 */ select
+            student0_.id as id1_1_,
+            student0_.course_id as course_i4_1_,
+            student0_.first_name as first_na2_1_,
+            student0_.last_name as last_nam3_1_ 
+        from
+            student student0_ 
+        where
+            student0_.last_name like ? escape ?
+2022-12-06 11:25:22.552 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [%o%]
+2022-12-06 11:25:22.553 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CHAR] - [\]
+2022-12-06 11:25:22.576 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    /* load al.polis.myfirstjpa.model.Student */ select
+        student0_.id as id1_1_0_,
+        student0_.course_id as course_i4_1_0_,
+        student0_.first_name as first_na2_1_0_,
+        student0_.last_name as last_nam3_1_0_ 
+    from
+        student student0_ 
+    where
+        student0_.id=?
+2022-12-06 11:25:22.577 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [91]
+2022-12-06 11:25:22.579 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    select
+        course0_.id as id1_0_0_,
+        course0_.code as code2_0_0_,
+        course0_.description as descript3_0_0_,
+        course0_.name as name4_0_0_ 
+    from
+        course course0_ 
+    where
+        course0_.id=?
+2022-12-06 11:25:22.580 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [95]
+2022-12-06 11:25:22.587 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    /* update
+        al.polis.myfirstjpa.model.Student */ update
+            student 
+        set
+            course_id=?,
+            first_name=?,
+            last_name=? 
+        where
+            id=?
+2022-12-06 11:25:22.588 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [95]
+2022-12-06 11:25:22.589 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Ledio]
+2022-12-06 11:25:22.591 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Hoxha]
+2022-12-06 11:25:22.592 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [91]
+2022-12-06 11:25:22.605 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    /* load al.polis.myfirstjpa.model.Student */ select
+        student0_.id as id1_1_0_,
+        student0_.course_id as course_i4_1_0_,
+        student0_.first_name as first_na2_1_0_,
+        student0_.last_name as last_nam3_1_0_ 
+    from
+        student student0_ 
+    where
+        student0_.id=?
+2022-12-06 11:25:22.606 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [92]
+2022-12-06 11:25:22.608 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    select
+        course0_.id as id1_0_0_,
+        course0_.code as code2_0_0_,
+        course0_.description as descript3_0_0_,
+        course0_.name as name4_0_0_ 
+    from
+        course course0_ 
+    where
+        course0_.id=?
+2022-12-06 11:25:22.609 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [95]
+2022-12-06 11:25:22.611 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    /* update
+        al.polis.myfirstjpa.model.Student */ update
+            student 
+        set
+            course_id=?,
+            first_name=?,
+            last_name=? 
+        where
+            id=?
+2022-12-06 11:25:22.611 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [95]
+2022-12-06 11:25:22.612 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Ina]
+2022-12-06 11:25:22.612 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Tano]
+2022-12-06 11:25:22.612 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [92]
+2022-12-06 11:25:22.620 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    /* select
+        generatedAlias0 
+    from
+        Student as generatedAlias0 
+    where
+        generatedAlias0.lastName like :param0 escape :param1 */ select
+            student0_.id as id1_1_,
+            student0_.course_id as course_i4_1_,
+            student0_.first_name as first_na2_1_,
+            student0_.last_name as last_nam3_1_ 
+        from
+            student student0_ 
+        where
+            student0_.last_name like ? escape ?
+2022-12-06 11:25:22.622 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [%i%]
+2022-12-06 11:25:22.623 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CHAR] - [\]
+2022-12-06 11:25:22.630 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    /* load al.polis.myfirstjpa.model.Student */ select
+        student0_.id as id1_1_0_,
+        student0_.course_id as course_i4_1_0_,
+        student0_.first_name as first_na2_1_0_,
+        student0_.last_name as last_nam3_1_0_ 
+    from
+        student student0_ 
+    where
+        student0_.id=?
+2022-12-06 11:25:22.631 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [93]
+2022-12-06 11:25:22.635 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    select
+        course0_.id as id1_0_0_,
+        course0_.code as code2_0_0_,
+        course0_.description as descript3_0_0_,
+        course0_.name as name4_0_0_ 
+    from
+        course course0_ 
+    where
+        course0_.id=?
+2022-12-06 11:25:22.636 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [96]
+2022-12-06 11:25:22.640 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    /* update
+        al.polis.myfirstjpa.model.Student */ update
+            student 
+        set
+            course_id=?,
+            first_name=?,
+            last_name=? 
+        where
+            id=?
+2022-12-06 11:25:22.641 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [96]
+2022-12-06 11:25:22.641 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Oresti]
+2022-12-06 11:25:22.641 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Elezi]
+2022-12-06 11:25:22.642 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [93]
+2022-12-06 11:25:22.703 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    /* load al.polis.myfirstjpa.model.Student */ select
+        student0_.id as id1_1_0_,
+        student0_.course_id as course_i4_1_0_,
+        student0_.first_name as first_na2_1_0_,
+        student0_.last_name as last_nam3_1_0_ 
+    from
+        student student0_ 
+    where
+        student0_.id=?
+2022-12-06 11:25:22.703 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [94]
+2022-12-06 11:25:22.709 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    select
+        course0_.id as id1_0_0_,
+        course0_.code as code2_0_0_,
+        course0_.description as descript3_0_0_,
+        course0_.name as name4_0_0_ 
+    from
+        course course0_ 
+    where
+        course0_.id=?
+2022-12-06 11:25:22.709 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [96]
+2022-12-06 11:25:22.713 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    /* update
+        al.polis.myfirstjpa.model.Student */ update
+            student 
+        set
+            course_id=?,
+            first_name=?,
+            last_name=? 
+        where
+            id=?
+2022-12-06 11:25:22.714 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [96]
+2022-12-06 11:25:22.714 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Jonada]
+2022-12-06 11:25:22.715 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Halidini]
+2022-12-06 11:25:22.715 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [94]
+2022-12-06 11:25:22.783 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    /* select
+        s 
+    from
+        Student s 
+    where
+        s.course.id = :courseId */ select
+            student0_.id as id1_1_,
+            student0_.course_id as course_i4_1_,
+            student0_.first_name as first_na2_1_,
+            student0_.last_name as last_nam3_1_ 
+        from
+            student student0_ 
+        where
+            student0_.course_id=?
+2022-12-06 11:25:22.783 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [95]
+2022-12-06 11:25:22.785 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    select
+        course0_.id as id1_0_0_,
+        course0_.code as code2_0_0_,
+        course0_.description as descript3_0_0_,
+        course0_.name as name4_0_0_ 
+    from
+        course course0_ 
+    where
+        course0_.id=?
+2022-12-06 11:25:22.786 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [95]
+2022-12-06 11:25:22.796 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    /* select
+        s.course 
+    from
+        Student s 
+    where
+        s.id = :studentId */ select
+            course1_.id as id1_0_,
+            course1_.code as code2_0_,
+            course1_.description as descript3_0_,
+            course1_.name as name4_0_ 
+        from
+            student student0_ 
+        inner join
+            course course1_ 
+                on student0_.course_id=course1_.id 
+        where
+            student0_.id=?
+2022-12-06 11:25:22.797 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [91]
+2022-12-06 11:25:22.812 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    select
+        students0_.course_id as course_i4_1_0_,
+        students0_.id as id1_1_0_,
+        students0_.id as id1_1_1_,
+        students0_.course_id as course_i4_1_1_,
+        students0_.first_name as first_na2_1_1_,
+        students0_.last_name as last_nam3_1_1_ 
+    from
+        student students0_ 
+    where
+        students0_.course_id=?
+2022-12-06 11:25:22.812 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [95]
+2022-12-06 11:25:22.839 DEBUG 11956 --- [main] org.hibernate.SQL                        : 
+    select
+        course0_.id as id1_0_0_,
+        course0_.code as code2_0_0_,
+        course0_.description as descript3_0_0_,
+        course0_.name as name4_0_0_ 
+    from
+        course course0_ 
+    where
+        course0_.id=?
+2022-12-06 11:25:22.840 TRACE 11956 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [95]
+2022-12-06 11:31:41.477  WARN 14076 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-12-06 11:31:42.759 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    /* delete 
+    from
+        Student x */ delete 
+        from
+            student
+2022-12-06 11:31:42.777 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    /* delete 
+    from
+        Course x */ delete 
+        from
+            course
+2022-12-06 11:31:42.797 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    /* select
+        count(*) 
+    from
+        Student x */ select
+            count(*) as col_0_0_ 
+        from
+            student student0_
+2022-12-06 11:31:42.840 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        hibernate_sequence for update
+            
+2022-12-06 11:31:42.842 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    update
+        hibernate_sequence 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2022-12-06 11:31:42.892 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    /* insert al.polis.myfirstjpa.model.Student
+        */ insert 
+        into
+            student
+            (course_id, first_name, last_name, id) 
+        values
+            (?, ?, ?, ?)
+2022-12-06 11:31:42.902 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2022-12-06 11:31:42.904 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Ledio]
+2022-12-06 11:31:42.904 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Hoxha]
+2022-12-06 11:31:42.904 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [97]
+2022-12-06 11:31:42.937 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    select
+        student0_.id as id1_1_0_,
+        student0_.course_id as course_i4_1_0_,
+        student0_.first_name as first_na2_1_0_,
+        student0_.last_name as last_nam3_1_0_,
+        course1_.id as id1_0_1_,
+        course1_.code as code2_0_1_,
+        course1_.description as descript3_0_1_,
+        course1_.name as name4_0_1_ 
+    from
+        student student0_ 
+    left outer join
+        course course1_ 
+            on student0_.course_id=course1_.id 
+    where
+        student0_.id=?
+2022-12-06 11:31:42.938 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [97]
+2022-12-06 11:31:42.979 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        hibernate_sequence for update
+            
+2022-12-06 11:31:42.982 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    update
+        hibernate_sequence 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2022-12-06 11:31:42.989 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    /* insert al.polis.myfirstjpa.model.Student
+        */ insert 
+        into
+            student
+            (course_id, first_name, last_name, id) 
+        values
+            (?, ?, ?, ?)
+2022-12-06 11:31:42.990 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2022-12-06 11:31:42.990 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Ina]
+2022-12-06 11:31:42.990 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Tano]
+2022-12-06 11:31:42.990 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [98]
+2022-12-06 11:31:43.006 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    select
+        student0_.id as id1_1_0_,
+        student0_.course_id as course_i4_1_0_,
+        student0_.first_name as first_na2_1_0_,
+        student0_.last_name as last_nam3_1_0_,
+        course1_.id as id1_0_1_,
+        course1_.code as code2_0_1_,
+        course1_.description as descript3_0_1_,
+        course1_.name as name4_0_1_ 
+    from
+        student student0_ 
+    left outer join
+        course course1_ 
+            on student0_.course_id=course1_.id 
+    where
+        student0_.id=?
+2022-12-06 11:31:43.007 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [98]
+2022-12-06 11:31:43.013 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        hibernate_sequence for update
+            
+2022-12-06 11:31:43.016 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    update
+        hibernate_sequence 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2022-12-06 11:31:43.020 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    /* insert al.polis.myfirstjpa.model.Student
+        */ insert 
+        into
+            student
+            (course_id, first_name, last_name, id) 
+        values
+            (?, ?, ?, ?)
+2022-12-06 11:31:43.021 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2022-12-06 11:31:43.023 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Oresti]
+2022-12-06 11:31:43.023 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Elezi]
+2022-12-06 11:31:43.024 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [99]
+2022-12-06 11:31:43.031 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    select
+        student0_.id as id1_1_0_,
+        student0_.course_id as course_i4_1_0_,
+        student0_.first_name as first_na2_1_0_,
+        student0_.last_name as last_nam3_1_0_,
+        course1_.id as id1_0_1_,
+        course1_.code as code2_0_1_,
+        course1_.description as descript3_0_1_,
+        course1_.name as name4_0_1_ 
+    from
+        student student0_ 
+    left outer join
+        course course1_ 
+            on student0_.course_id=course1_.id 
+    where
+        student0_.id=?
+2022-12-06 11:31:43.032 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [99]
+2022-12-06 11:31:43.039 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        hibernate_sequence for update
+            
+2022-12-06 11:31:43.040 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    update
+        hibernate_sequence 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2022-12-06 11:31:43.045 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    /* insert al.polis.myfirstjpa.model.Student
+        */ insert 
+        into
+            student
+            (course_id, first_name, last_name, id) 
+        values
+            (?, ?, ?, ?)
+2022-12-06 11:31:43.046 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [null]
+2022-12-06 11:31:43.046 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Jonada]
+2022-12-06 11:31:43.046 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Halidini]
+2022-12-06 11:31:43.046 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [100]
+2022-12-06 11:31:43.051 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    select
+        student0_.id as id1_1_0_,
+        student0_.course_id as course_i4_1_0_,
+        student0_.first_name as first_na2_1_0_,
+        student0_.last_name as last_nam3_1_0_,
+        course1_.id as id1_0_1_,
+        course1_.code as code2_0_1_,
+        course1_.description as descript3_0_1_,
+        course1_.name as name4_0_1_ 
+    from
+        student student0_ 
+    left outer join
+        course course1_ 
+            on student0_.course_id=course1_.id 
+    where
+        student0_.id=?
+2022-12-06 11:31:43.051 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [100]
+2022-12-06 11:31:43.064 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        hibernate_sequence for update
+            
+2022-12-06 11:31:43.067 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    update
+        hibernate_sequence 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2022-12-06 11:31:43.080 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    /* insert al.polis.myfirstjpa.model.Course
+        */ insert 
+        into
+            course
+            (code, description, name, id) 
+        values
+            (?, ?, ?, ?)
+2022-12-06 11:31:43.081 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [JAP]
+2022-12-06 11:31:43.081 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Use Java as better as possible]
+2022-12-06 11:31:43.081 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Java Advanced Programming]
+2022-12-06 11:31:43.081 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [101]
+2022-12-06 11:31:43.089 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    select
+        next_val as id_val 
+    from
+        hibernate_sequence for update
+            
+2022-12-06 11:31:43.091 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    update
+        hibernate_sequence 
+    set
+        next_val= ? 
+    where
+        next_val=?
+2022-12-06 11:31:43.097 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    /* insert al.polis.myfirstjpa.model.Course
+        */ insert 
+        into
+            course
+            (code, description, name, id) 
+        values
+            (?, ?, ?, ?)
+2022-12-06 11:31:43.098 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [PYT]
+2022-12-06 11:31:43.098 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Use Python everywhere]
+2022-12-06 11:31:43.098 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Python Programming]
+2022-12-06 11:31:43.099 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [102]
+2022-12-06 11:31:43.154 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    /* select
+        generatedAlias0 
+    from
+        Student as generatedAlias0 
+    where
+        generatedAlias0.lastName like :param0 escape :param1 */ select
+            student0_.id as id1_1_,
+            student0_.course_id as course_i4_1_,
+            student0_.first_name as first_na2_1_,
+            student0_.last_name as last_nam3_1_ 
+        from
+            student student0_ 
+        where
+            student0_.last_name like ? escape ?
+2022-12-06 11:31:43.159 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [%o%]
+2022-12-06 11:31:43.161 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CHAR] - [\]
+2022-12-06 11:31:43.181 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    /* load al.polis.myfirstjpa.model.Student */ select
+        student0_.id as id1_1_0_,
+        student0_.course_id as course_i4_1_0_,
+        student0_.first_name as first_na2_1_0_,
+        student0_.last_name as last_nam3_1_0_ 
+    from
+        student student0_ 
+    where
+        student0_.id=?
+2022-12-06 11:31:43.182 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [97]
+2022-12-06 11:31:43.185 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    select
+        course0_.id as id1_0_0_,
+        course0_.code as code2_0_0_,
+        course0_.description as descript3_0_0_,
+        course0_.name as name4_0_0_ 
+    from
+        course course0_ 
+    where
+        course0_.id=?
+2022-12-06 11:31:43.186 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [101]
+2022-12-06 11:31:43.198 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    /* update
+        al.polis.myfirstjpa.model.Student */ update
+            student 
+        set
+            course_id=?,
+            first_name=?,
+            last_name=? 
+        where
+            id=?
+2022-12-06 11:31:43.199 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [101]
+2022-12-06 11:31:43.199 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Ledio]
+2022-12-06 11:31:43.200 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Hoxha]
+2022-12-06 11:31:43.201 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [97]
+2022-12-06 11:31:43.215 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    /* load al.polis.myfirstjpa.model.Student */ select
+        student0_.id as id1_1_0_,
+        student0_.course_id as course_i4_1_0_,
+        student0_.first_name as first_na2_1_0_,
+        student0_.last_name as last_nam3_1_0_ 
+    from
+        student student0_ 
+    where
+        student0_.id=?
+2022-12-06 11:31:43.216 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [98]
+2022-12-06 11:31:43.219 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    select
+        course0_.id as id1_0_0_,
+        course0_.code as code2_0_0_,
+        course0_.description as descript3_0_0_,
+        course0_.name as name4_0_0_ 
+    from
+        course course0_ 
+    where
+        course0_.id=?
+2022-12-06 11:31:43.219 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [101]
+2022-12-06 11:31:43.222 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    /* update
+        al.polis.myfirstjpa.model.Student */ update
+            student 
+        set
+            course_id=?,
+            first_name=?,
+            last_name=? 
+        where
+            id=?
+2022-12-06 11:31:43.224 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [101]
+2022-12-06 11:31:43.225 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Ina]
+2022-12-06 11:31:43.225 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Tano]
+2022-12-06 11:31:43.225 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [98]
+2022-12-06 11:31:43.239 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    /* select
+        generatedAlias0 
+    from
+        Student as generatedAlias0 
+    where
+        generatedAlias0.lastName like :param0 escape :param1 */ select
+            student0_.id as id1_1_,
+            student0_.course_id as course_i4_1_,
+            student0_.first_name as first_na2_1_,
+            student0_.last_name as last_nam3_1_ 
+        from
+            student student0_ 
+        where
+            student0_.last_name like ? escape ?
+2022-12-06 11:31:43.240 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [%i%]
+2022-12-06 11:31:43.240 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CHAR] - [\]
+2022-12-06 11:31:43.249 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    /* load al.polis.myfirstjpa.model.Student */ select
+        student0_.id as id1_1_0_,
+        student0_.course_id as course_i4_1_0_,
+        student0_.first_name as first_na2_1_0_,
+        student0_.last_name as last_nam3_1_0_ 
+    from
+        student student0_ 
+    where
+        student0_.id=?
+2022-12-06 11:31:43.250 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [99]
+2022-12-06 11:31:43.254 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    select
+        course0_.id as id1_0_0_,
+        course0_.code as code2_0_0_,
+        course0_.description as descript3_0_0_,
+        course0_.name as name4_0_0_ 
+    from
+        course course0_ 
+    where
+        course0_.id=?
+2022-12-06 11:31:43.255 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [102]
+2022-12-06 11:31:43.260 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    /* update
+        al.polis.myfirstjpa.model.Student */ update
+            student 
+        set
+            course_id=?,
+            first_name=?,
+            last_name=? 
+        where
+            id=?
+2022-12-06 11:31:43.261 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [102]
+2022-12-06 11:31:43.261 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Oresti]
+2022-12-06 11:31:43.261 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Elezi]
+2022-12-06 11:31:43.261 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [99]
+2022-12-06 11:31:43.272 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    /* load al.polis.myfirstjpa.model.Student */ select
+        student0_.id as id1_1_0_,
+        student0_.course_id as course_i4_1_0_,
+        student0_.first_name as first_na2_1_0_,
+        student0_.last_name as last_nam3_1_0_ 
+    from
+        student student0_ 
+    where
+        student0_.id=?
+2022-12-06 11:31:43.272 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [100]
+2022-12-06 11:31:43.275 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    select
+        course0_.id as id1_0_0_,
+        course0_.code as code2_0_0_,
+        course0_.description as descript3_0_0_,
+        course0_.name as name4_0_0_ 
+    from
+        course course0_ 
+    where
+        course0_.id=?
+2022-12-06 11:31:43.275 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [102]
+2022-12-06 11:31:43.278 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    /* update
+        al.polis.myfirstjpa.model.Student */ update
+            student 
+        set
+            course_id=?,
+            first_name=?,
+            last_name=? 
+        where
+            id=?
+2022-12-06 11:31:43.279 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [102]
+2022-12-06 11:31:43.280 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [VARCHAR] - [Jonada]
+2022-12-06 11:31:43.280 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [3] as [VARCHAR] - [Halidini]
+2022-12-06 11:31:43.280 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [4] as [BIGINT] - [100]
+2022-12-06 11:31:43.312 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    /* select
+        s 
+    from
+        Student s 
+    where
+        s.course.id = :courseId */ select
+            student0_.id as id1_1_,
+            student0_.course_id as course_i4_1_,
+            student0_.first_name as first_na2_1_,
+            student0_.last_name as last_nam3_1_ 
+        from
+            student student0_ 
+        where
+            student0_.course_id=?
+2022-12-06 11:31:43.313 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [101]
+2022-12-06 11:31:43.318 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    select
+        course0_.id as id1_0_0_,
+        course0_.code as code2_0_0_,
+        course0_.description as descript3_0_0_,
+        course0_.name as name4_0_0_ 
+    from
+        course course0_ 
+    where
+        course0_.id=?
+2022-12-06 11:31:43.321 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [101]
+2022-12-06 11:31:43.333 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    /* select
+        s.course 
+    from
+        Student s 
+    where
+        s.id = :studentId */ select
+            course1_.id as id1_0_,
+            course1_.code as code2_0_,
+            course1_.description as descript3_0_,
+            course1_.name as name4_0_ 
+        from
+            student student0_ 
+        inner join
+            course course1_ 
+                on student0_.course_id=course1_.id 
+        where
+            student0_.id=?
+2022-12-06 11:31:43.333 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [97]
+2022-12-06 11:31:43.631 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    /* select
+        generatedAlias0 
+    from
+        Student as generatedAlias0 
+    where
+        generatedAlias0.lastName=:param0 */ select
+            student0_.id as id1_1_,
+            student0_.course_id as course_i4_1_,
+            student0_.first_name as first_na2_1_,
+            student0_.last_name as last_nam3_1_ 
+        from
+            student student0_ 
+        where
+            student0_.last_name=?
+2022-12-06 11:31:43.632 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Hoxha]
+2022-12-06 11:31:43.634 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    select
+        course0_.id as id1_0_0_,
+        course0_.code as code2_0_0_,
+        course0_.description as descript3_0_0_,
+        course0_.name as name4_0_0_ 
+    from
+        course course0_ 
+    where
+        course0_.id=?
+2022-12-06 11:31:43.634 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [101]
+2022-12-06 11:31:43.637 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    /* select
+        s 
+    from
+        Student s 
+    where
+        lastName = :surname */ select
+            student0_.id as id1_1_,
+            student0_.course_id as course_i4_1_,
+            student0_.first_name as first_na2_1_,
+            student0_.last_name as last_nam3_1_ 
+        from
+            student student0_ 
+        where
+            student0_.last_name=?
+2022-12-06 11:31:43.638 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [Tano]
+2022-12-06 11:31:43.639 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    select
+        course0_.id as id1_0_0_,
+        course0_.code as code2_0_0_,
+        course0_.description as descript3_0_0_,
+        course0_.name as name4_0_0_ 
+    from
+        course course0_ 
+    where
+        course0_.id=?
+2022-12-06 11:31:43.640 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [101]
+2022-12-06 11:31:43.642 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    /* select
+        generatedAlias0 
+    from
+        Student as generatedAlias0 
+    where
+        generatedAlias0.lastName like :param0 escape :param1 */ select
+            student0_.id as id1_1_,
+            student0_.course_id as course_i4_1_,
+            student0_.first_name as first_na2_1_,
+            student0_.last_name as last_nam3_1_ 
+        from
+            student student0_ 
+        where
+            student0_.last_name like ? escape ?
+2022-12-06 11:31:43.642 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [%o%]
+2022-12-06 11:31:43.643 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [2] as [CHAR] - [\]
+2022-12-06 11:31:43.645 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    select
+        course0_.id as id1_0_0_,
+        course0_.code as code2_0_0_,
+        course0_.description as descript3_0_0_,
+        course0_.name as name4_0_0_ 
+    from
+        course course0_ 
+    where
+        course0_.id=?
+2022-12-06 11:31:43.645 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [101]
+2022-12-06 11:31:43.648 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    /* select
+        s 
+    from
+        Student s 
+    where
+        lastName like :surname */ select
+            student0_.id as id1_1_,
+            student0_.course_id as course_i4_1_,
+            student0_.first_name as first_na2_1_,
+            student0_.last_name as last_nam3_1_ 
+        from
+            student student0_ 
+        where
+            student0_.last_name like ?
+2022-12-06 11:31:43.648 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [%i%]
+2022-12-06 11:31:43.649 DEBUG 14076 --- [main] org.hibernate.SQL                        : 
+    select
+        course0_.id as id1_0_0_,
+        course0_.code as code2_0_0_,
+        course0_.description as descript3_0_0_,
+        course0_.name as name4_0_0_ 
+    from
+        course course0_ 
+    where
+        course0_.id=?
+2022-12-06 11:31:43.650 TRACE 14076 --- [main] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [BIGINT] - [102]
