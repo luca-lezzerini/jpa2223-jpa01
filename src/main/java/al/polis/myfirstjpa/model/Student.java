@@ -5,7 +5,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import lombok.AllArgsConstructor;
+import javax.persistence.ManyToOne;
 import lombok.Data;
 import lombok.ToString;
 
@@ -13,6 +13,7 @@ import lombok.ToString;
 @ToString
 @Entity
 public class Student implements Serializable {
+
     @Id
     @GeneratedValue
     private Long id;
@@ -21,6 +22,9 @@ public class Student implements Serializable {
     @Column
     private String lastName;
 
+    @ManyToOne
+    private Course course;
+
     public Student() {
     }
 
@@ -28,7 +32,5 @@ public class Student implements Serializable {
         this.firstName = firstName;
         this.lastName = lastName;
     }
-    
-    
-    
+
 }
